@@ -55,7 +55,7 @@ export default class AntdMobile extends Component {
           value={this.state.date}
           onChange={date => this.setState({ date })}
         >
-          <List.Item arrow="horizontal">Datetime</List.Item>
+          <List.Item arrow="horizontal">Datetime1</List.Item>
         </DatePicker>
         <DatePicker
           mode="date"
