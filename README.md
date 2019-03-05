@@ -32,7 +32,5 @@ webpack.config.prod.js
 
 1.Tree Shaking
 
-## react-router@4.28.2
-
 
 
