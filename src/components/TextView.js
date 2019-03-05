@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Button } from 'antd-mobile';
 import PropTypes from 'prop-types';
 import './TextView.css'
 import d from '../data/data';
@@ -23,6 +24,9 @@ export default class TextView extends Component {
       <hr />
       <h2>Tree Shaking</h2>
       <p>{'Test Tree Shaking, the result of used function is: ' + cube(5)}</p>
+      <hr />
+      <h2>Antd-mobile</h2>
+      <Button>button</Button>
       <hr />
       
     </div>

@@ -26,8 +26,14 @@ module.exports = {
         loader:"babel-loader",
         //下边这个query作为单独的属性写成一个对象，放到.babelrc文件里
         query: {
-          presets: ['es2015','react']
-        }
+          plugins: [
+            //引入antd-mobile
+            //注意"libraryDirectory": "lib",  //default: lib
+            //不用设置，用默认的就可以，自动找/node_modules/antd-mobile/lib/
+            ["import", [{ "style": "css", "libraryName": "antd-mobile" }]]
+          ],
+          presets: [['es2015', { modules: false }], 'react']
+        },
       },
       //支持图片(?limit=1024指：如果图片小于1k就会以dataUrl（base64编码）的形式写在脚本里，否则会在输出目录中拷贝一份图片，并以md5值命名，
       //引用图片的url也会自动改成相应的文件名)
