@@ -1,5 +1,5 @@
 {
-  "name": "webpack-react-cli",
+  "name": "webpack-react-antd-mobile",
   "version": "1.0.0",
   "description": "use webpack to build a react production project.",
   "main": "webpack.config.js",

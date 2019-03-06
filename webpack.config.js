@@ -32,7 +32,9 @@ module.exports = {
             //不用设置，用默认的就可以，自动找/node_modules/antd-mobile/lib/
             ["import", [{ "style": "css", "libraryName": "antd-mobile" }]]
           ],
-          presets: [['es2015', { modules: false }], 'react']
+          //presets: [['es2015', { modules: false }], 'react']
+          //若使用{modules:false}可以开启treeshaking，但prod打包的时候无法把antd-mobile之外的样式打进去
+          presets: ['es2015', 'react']
         },
       },
       //支持图片(?limit=1024指：如果图片小于1k就会以dataUrl（base64编码）的形式写在脚本里，否则会在输出目录中拷贝一份图片，并以md5值命名，

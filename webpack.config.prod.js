@@ -20,7 +20,7 @@ module.exports = merge(base, {
     splitChunks: {
       cacheGroups: {
         styles: {
-          name: 'styles',
+          name: 'style',
           test: /\.(sa|sc|c)ss$/,
           chunks: 'all',
           enforce: true
@@ -36,7 +36,7 @@ module.exports = merge(base, {
         test: /\.(sa|sc|c)ss$/,
         use: [
           MiniCssExtractPlugin.loader,
-          "css-loader"
+          "css-loader",
         ]
       },
     ]
@@ -47,10 +47,10 @@ module.exports = merge(base, {
       'process.env.NODE_ENV': '"production"'
     }),
     new MiniCssExtractPlugin({
-      filename: '[name]_[hash].css',
+      filename: '[name]_[hash].css'
     }),
     new OptimizeCssAssetsPlugin({
-      assetNameRegExp: /styles_[0-9a-zA-Z]+\.css/g,
+      assetNameRegExp: /style_[0-9a-zA-Z]+\.css/g,
       cssProcessor: require('cssnano'),
       cssProcessorPluginOptions: {
         preset: ['default', { discardComments: { removeAll: true } }],
